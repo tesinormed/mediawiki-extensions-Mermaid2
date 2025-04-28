@@ -1,0 +1,56 @@
+{
+	"name": "Mermaid2",
+	"version": "0.1.0",
+	"author": [
+		"tesinormed"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Mermaid2",
+	"descriptionmsg": "mermaid2-desc",
+	"license-name": "CC0-1.0",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.43.0",
+		"platform": {
+			"php": ">= 8.1"
+		}
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\Mermaid2\\": "src/"
+	},
+	"config": {
+		"Mermaid2SecurityLevel": {
+			"value": "strict"
+		}
+	},
+	"ConfigRegistry": {
+		"mermaid2": "GlobalVarConfig::newInstance"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extension\\Mermaid2\\Hooks",
+			"services": [
+				"MainConfig",
+				"ConfigFactory"
+			]
+		}
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "main"
+	},
+	"ResourceModules": {
+		"ext.Mermaid2": {
+			"localBasePath": "modules/ext.Mermaid2",
+			"remoteExtPath": "Mermaid2/modules/ext.Mermaid2",
+			"packageFiles": [
+				"ext.Mermaid2.js"
+			]
+		}
+	},
+	"ForeignResourcesDir": "resources",
+	"MessagesDirs": {
+		"Mermaid2": [
+			"i18n"
+		]
+	},
+	"manifest_version": 2
+}

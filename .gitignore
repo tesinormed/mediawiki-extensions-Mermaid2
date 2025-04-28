@@ -1,0 +1,10 @@
+# PHP
+/composer.lock
+/vendor
+
+# JavaScript
+/node_modules
+.eslintcache
+
+# JetBrains
+/.idea
