@@ -36,11 +36,14 @@ class Hooks implements ParserFirstCallInitHook {
 
 		// add Mermaid to the page
 		// ResourceLoader has issues, so we use a <script> tag
-		$parser->getOutput()->addHeadItem( Html::element(
+		$parser->getOutput()->addHeadItem(
+			Html::element(
 				'script',
 				[ 'src' => $this->mainConfig->get( MainConfigNames::ExtensionAssetsPath )
 					. '/Mermaid2/resources/Mermaid/mermaid.min.js' ]
-		) );
+			),
+			tag: 'Mermaid2-Mermaid'
+		);
 		$parser->getOutput()->addModules( [ 'ext.Mermaid2' ] );
 		$parser->getOutput()->setJsConfigVar(
 			'wgMermaid2SecurityLevel',
