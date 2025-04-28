@@ -1,6 +1,6 @@
 {
 	"name": "Mermaid2",
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"author": [
 		"tesinormed"
 	],
@@ -17,23 +17,11 @@
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\Mermaid2\\": "src/"
 	},
-	"config": {
-		"Mermaid2SecurityLevel": {
-			"value": "strict"
-		},
-		"Mermaid2DefaultTheme": {
-			"value": "neutral"
-		}
-	},
-	"ConfigRegistry": {
-		"mermaid2": "GlobalVarConfig::newInstance"
-	},
 	"HookHandlers": {
 		"main": {
 			"class": "MediaWiki\\Extension\\Mermaid2\\Hooks",
 			"services": [
-				"MainConfig",
-				"ConfigFactory"
+				"MainConfig"
 			]
 		}
 	},

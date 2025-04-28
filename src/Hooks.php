@@ -3,7 +3,6 @@
 namespace MediaWiki\Extension\Mermaid2;
 
 use MediaWiki\Config\Config;
-use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Html\Html;
 use MediaWiki\MainConfigNames;
@@ -13,11 +12,9 @@ use PPFrame;
 
 class Hooks implements ParserFirstCallInitHook {
 	private Config $mainConfig;
-	private Config $extensionConfig;
 
-	public function __construct( Config $mainConfig, ConfigFactory $configFactory ) {
+	public function __construct( Config $mainConfig ) {
 		$this->mainConfig = $mainConfig;
-		$this->extensionConfig = $configFactory->makeConfig( 'mermaid2' );
 	}
 
 	/**
@@ -45,14 +42,6 @@ class Hooks implements ParserFirstCallInitHook {
 			tag: 'Mermaid2-Mermaid'
 		);
 		$parser->getOutput()->addModules( [ 'ext.Mermaid2' ] );
-		$parser->getOutput()->setJsConfigVar(
-			'wgMermaid2SecurityLevel',
-			$this->extensionConfig->get( 'Mermaid2SecurityLevel' )
-		);
-		$parser->getOutput()->setJsConfigVar(
-			'wgMermaid2DefaultTheme',
-			$this->extensionConfig->get( 'Mermaid2DefaultTheme' )
-		);
 
 		$attribs = Sanitizer::validateTagAttributes( $params, 'div' );
 		if ( isset( $attribs['class'] ) ) {
