@@ -46,6 +46,10 @@ class Hooks implements ParserFirstCallInitHook {
 			'wgMermaid2SecurityLevel',
 			$this->extensionConfig->get( 'Mermaid2SecurityLevel' )
 		);
+		$parser->getOutput()->setJsConfigVar(
+			'wgMermaid2DefaultTheme',
+			$this->extensionConfig->get( 'Mermaid2DefaultTheme' )
+		);
 
 		$attribs = Sanitizer::validateTagAttributes( $params, 'div' );
 		if ( isset( $attribs['class'] ) ) {

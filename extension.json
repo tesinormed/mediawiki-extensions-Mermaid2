@@ -1,6 +1,6 @@
 {
 	"name": "Mermaid2",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"author": [
 		"tesinormed"
 	],
@@ -20,6 +20,9 @@
 	"config": {
 		"Mermaid2SecurityLevel": {
 			"value": "strict"
+		},
+		"Mermaid2DefaultTheme": {
+			"value": "neutral"
 		}
 	},
 	"ConfigRegistry": {
