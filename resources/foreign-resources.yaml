@@ -3,6 +3,6 @@ Mermaid:
   license: MIT
   authors: Knut Sveidqvist
   type: file
-  version: 11.7.0
-  src: https://cdn.jsdelivr.net/npm/mermaid@11.7.0/dist/mermaid.min.js
-  integrity: sha384-4fXW2TVGH18QUgxn3sNYbDYVH5fgFVrt+W7YRTu6C/aYiQ3FZbYI0TQjrf91G9s4
+  version: 11.9.0
+  src: https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js
+  integrity: sha384-UzWEhMP22MxNnr2bzqAdmtf1FDy5iKDUq6hLXJFLqC7dfGkc6W/hshbx9m71zyt5
