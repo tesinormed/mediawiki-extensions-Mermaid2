@@ -32,18 +32,20 @@ class Hooks implements ParserFirstCallInitHook {
 		}
 
 		// add Mermaid to the page
-		// ResourceLoader has issues, so we use a <script> tag
-		$parser->getOutput()->addHeadItem(
-			Html::element(
-				'script',
-				[ 'src' => $this->mainConfig->get( MainConfigNames::ExtensionAssetsPath )
-					. '/Mermaid2/resources/Mermaid/mermaid.min.js' ]
-			),
-			tag: 'Mermaid2-Mermaid'
-		);
 		$parser->getOutput()->addModules( [ 'ext.Mermaid2' ] );
+		// loaded later using mw.loader.getScript
+		$parser->getOutput()->setJsConfigVar(
+			'wgMermaid2ScriptUrl',
+			$this->mainConfig->get( MainConfigNames::ExtensionAssetsPath )
+				. '/Mermaid2/resources/Mermaid/mermaid.min.js'
+		);
+		$parser->getOutput()->setJsConfigVar(
+			'wgMermaid2PanzoomScriptUrl',
+			$this->mainConfig->get( MainConfigNames::ExtensionAssetsPath )
+				. '/Mermaid2/resources/Panzoom/panzoom.min.js'
+		);
 
-		$attribs = Sanitizer::validateTagAttributes( $params, 'div' );
+		$attribs = Sanitizer::validateTagAttributes( $params, element: 'pre' );
 		if ( isset( $attribs['class'] ) ) {
 			$attribs['class'] = 'mermaid ' . $attribs['class'];
 		} else {
@@ -52,7 +54,7 @@ class Hooks implements ParserFirstCallInitHook {
 
 		// outputted HTML
 		return [
-			Html::element( 'div', $attribs, trim( $text ) ),
+			Html::element( 'pre', $attribs, trim( $text ) ),
 			// make sure this won't get mangled
 			'markerType' => 'nowiki'
 		];

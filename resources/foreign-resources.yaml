@@ -6,3 +6,12 @@ Mermaid:
   version: 11.9.0
   src: https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js
   integrity: sha384-UzWEhMP22MxNnr2bzqAdmtf1FDy5iKDUq6hLXJFLqC7dfGkc6W/hshbx9m71zyt5
+
+Panzoom:
+  homepage: https://timmywil.com/panzoom/
+  license: MIT
+  authors: Timmy Willison
+  type: file
+  version: 4.6.0
+  src: https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.6.0/dist/panzoom.min.js
+  integrity: sha384-p/V9q47QHNmBI0EG7lJPLVHC5WN1mgpLtNpFykf0IX8iJ4xDCYPWEXcigFOvYW52
