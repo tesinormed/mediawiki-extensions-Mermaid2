@@ -28,9 +28,10 @@ $.when(
 				nodes: $content.find( '.mermaid' ), // limit scope to $content
 				postRenderCallback: ( id ) => {
 					const element = document.getElementById( id );
+					const dataset = element.parentElement.dataset;
 
 					// disable if requested
-					if ( element.parentElement.dataset.panzoom === 'off' ) {
+					if ( dataset.panzoom === 'off' ) {
 						return;
 					}
 
@@ -38,11 +39,13 @@ $.when(
 					const panzoom = Panzoom( element, {
 						canvas: true,
 						minScale: 1,
-						maxScale: 5,
-						step: 0.25
+						maxScale: 'panzoomMaxScale' in dataset ? dataset.panzoomMaxScale : 4,
+						step: 0.3
 					} );
 					element.parentElement.addEventListener( 'wheel', panzoom.zoomWithWheel );
 				}
+			} ).then( () => {
+				mw.hook( 'ext.Mermaid2.postRun' ).fire( $content );
 			} );
 		} );
 	},
