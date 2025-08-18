@@ -1,6 +1,6 @@
 {
 	"name": "Mermaid2",
-	"version": "0.5.0",
+	"version": "0.6.0",
 	"author": [
 		"tesinormed"
 	],
@@ -9,7 +9,7 @@
 	"license-name": "CC0-1.0",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.43.0",
+		"MediaWiki": ">= 1.43",
 		"platform": {
 			"php": ">= 8.1"
 		}
