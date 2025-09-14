@@ -3,9 +3,9 @@ Mermaid:
   license: MIT
   authors: Knut Sveidqvist
   type: file
-  version: 11.10.1
-  src: https://cdn.jsdelivr.net/npm/mermaid@11.10.1/dist/mermaid.min.js
-  integrity: sha384-7nxfNsXzOEcSwk+tzfq6tbjmfg0P2Gqmi7JTnRjv9Ll3gFWNro6lI7hPtZPM5ZLD
+  version: 11.11.0
+  src: https://cdn.jsdelivr.net/npm/mermaid@11.11.0/dist/mermaid.min.js
+  integrity: sha384-C21M+hYzDJXD/DX5WsUXM3HXXjl7OoOhRmMQBk65O3qx1sIILZV4074xRvGbt6+K
 
 Panzoom:
   homepage: https://timmywil.com/panzoom/
