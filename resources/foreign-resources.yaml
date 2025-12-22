@@ -1,16 +1,14 @@
 Mermaid:
   homepage: https://mermaid.js.org/
   license: MIT
-  authors: Knut Sveidqvist
-  type: file
+  authors: Knut Sveidqvist and contributors
+  type: doc-only
   version: 11.12.2
-  src: https://cdn.jsdelivr.net/npm/mermaid@11.12.2/dist/mermaid.min.js
-  integrity: sha384-1ggI9FC3CkghppRD/XCR4aD+jp4DxwXlJIW0wxhyTLNKuiZEW3c4BwcjKXl0iVAJ
 
 Panzoom:
   homepage: https://timmywil.com/panzoom/
   license: MIT
-  authors: Timmy Willison
+  authors: Timmy Willison and contributors
   type: file
   version: 4.6.1
   src: https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.6.1/dist/panzoom.min.js

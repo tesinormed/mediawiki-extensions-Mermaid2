@@ -1,10 +1,10 @@
 # PHP
-/composer.lock
-/vendor
+composer.lock
+vendor/
 
 # JavaScript
-/node_modules
+node_modules/
 .eslintcache
 
 # JetBrains
-/.idea
+.idea/

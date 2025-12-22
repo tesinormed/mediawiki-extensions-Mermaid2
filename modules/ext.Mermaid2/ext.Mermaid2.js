@@ -39,8 +39,7 @@ $.when(
 					const panzoom = Panzoom( element, {
 						canvas: true,
 						minScale: 1,
-						maxScale: 'panzoomMaxScale' in dataset ? dataset.panzoomMaxScale : 4,
-						step: 0.3
+						maxScale: 'panzoomMaxScale' in dataset ? dataset.panzoomMaxScale : 10,
 					} );
 					element.parentElement.addEventListener( 'wheel', panzoom.zoomWithWheel );
 				}
