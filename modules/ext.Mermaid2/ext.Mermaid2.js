@@ -8,12 +8,8 @@ $.when(
 		const rootClasses = document.documentElement.classList;
 
 		// determine dark mode status
-		let darkMode = false;
-		if ( rootClasses.contains( 'skin-theme-clientpref-night' ) ) {
-			darkMode = true;
-		} else if ( rootClasses.contains( 'skin-theme-clientpref-os' ) && window.matchMedia( '(prefers-color-scheme: dark)' ).matches ) {
-			darkMode = true;
-		}
+		let darkMode = rootClasses.contains( 'skin-theme-clientpref-night' )
+			|| ( rootClasses.contains( 'skin-theme-clientpref-os' ) && window.matchMedia( '(prefers-color-scheme: dark)' ).matches );
 
 		// initialize Mermaid
 		mermaid.initialize( {
