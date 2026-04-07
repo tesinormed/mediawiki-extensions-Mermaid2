@@ -7,8 +7,8 @@ use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Html\Html;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\PPFrame;
 use MediaWiki\Parser\Sanitizer;
-use PPFrame;
 
 class Hooks implements ParserFirstCallInitHook {
 	private Config $mainConfig;

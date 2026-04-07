@@ -3,13 +3,13 @@ Mermaid:
   license: MIT
   authors: Knut Sveidqvist and contributors
   type: doc-only
-  version: 11.12.2
+  version: 11.14.0
 
 Panzoom:
   homepage: https://timmywil.com/panzoom/
   license: MIT
   authors: Timmy Willison and contributors
   type: file
-  version: 4.6.1
-  src: https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.6.1/dist/panzoom.min.js
-  integrity: sha384-u8bfQFCgKdKTTif7iRiNzaUcfforzK6TX9dtMm6yqWCfFRmzlg3cz2npEiioASrH
+  version: 4.6.2
+  src: https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.6.2/dist/panzoom.min.js
+  integrity: sha384-irdz3GZoyr9anVd5nSLy63Z39tLtMTNQFFKxhx/KM08C8NkKpZre6M/m4QCUeeB3
